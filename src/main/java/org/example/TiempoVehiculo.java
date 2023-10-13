@@ -1,0 +1,67 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class TiempoVehiculo {
+    public double tiempoRecorrido(int opcion, double distancia) {
+        double velocidadAuto = 50.0; //en kilometros/hora
+        double velocidadMoto = 80.0;  //en kilometros/hora
+        double velocidadBicicleta = 20.0;  //en kilometros/hora
+
+        double tiempo = 0.0; // en horas
+
+        if (opcion == 1) {
+            tiempo = distancia / velocidadAuto;
+        } else if (opcion == 2) {
+            tiempo = distancia / velocidadMoto;
+        } else if (opcion == 3) {
+            tiempo = distancia / velocidadBicicleta;
+        }
+
+        return tiempo;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        TiempoVehiculo tiempoVehiculo = new TiempoVehiculo();
+
+        System.out.println("Vamos a calcular el tiempo de distancia");
+        System.out.println("Por favor, ingrese su nombre");
+        String nombre = scanner.nextLine();
+
+        System.out.println("Ingrese su destino");
+        String destino = scanner.nextLine();
+
+        System.out.println("Ahora escoja un vehículo para su viaje");
+        System.out.println("1. Auto");
+        System.out.println("2. Moto");
+        System.out.println("3. Bicicleta"); // Corrección: Cambié el "2" a "3" aquí.
+        System.out.println("Escoja una opción");
+
+        int opcion = scanner.nextInt();
+
+        System.out.println("Ingrese la distancia");
+        double distancia = scanner.nextDouble();
+
+        double tiempo = tiempoVehiculo.tiempoRecorrido(opcion, distancia);
+        String vehiculo = getVehiculo(opcion);
+
+        System.out.println("Hola: " + nombre);
+        System.out.println("El tiempo de viaje aproximado para llegar a: " + destino);
+        System.out.println("en " + vehiculo);
+        System.out.println("es de: " + tiempo);
+
+        scanner.close();
+    }
+
+    private static String getVehiculo(int opcion) {
+        if (opcion == 1) {
+            return "auto";
+        } else if (opcion == 2) {
+            return "moto";
+        } else if (opcion == 3) {
+            return "bicicleta";
+        }
+        return "vehículo desconocido";
+    }
+}
