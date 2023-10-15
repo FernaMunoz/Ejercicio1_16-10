@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TiempoVehiculo {
     public double tiempoRecorrido(int opcion, double distancia) {
-        double velocidadAuto = 50.0; //en kilometros/hora
+        double velocidadAuto = 50.0; //en kilometros/hora 
         double velocidadMoto = 80.0;  //en kilometros/hora
         double velocidadBicicleta = 20.0;  //en kilometros/hora
 
