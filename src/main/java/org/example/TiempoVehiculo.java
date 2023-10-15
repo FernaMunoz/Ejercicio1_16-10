@@ -35,7 +35,7 @@ public class TiempoVehiculo {
         System.out.println("Ahora escoja un vehículo para su viaje");
         System.out.println("1. Auto");
         System.out.println("2. Moto");
-        System.out.println("3. Bicicleta"); // Corrección: Cambié el "2" a "3" aquí.
+        System.out.println("3. Bicicleta");
         System.out.println("Escoja una opción");
 
         int opcion = scanner.nextInt();
@@ -46,12 +46,9 @@ public class TiempoVehiculo {
         double tiempo = tiempoVehiculo.tiempoRecorrido(opcion, distancia);
         String vehiculo = getVehiculo(opcion);
 
-        System.out.println("Hola: " + nombre);
-        System.out.println("El tiempo de viaje aproximado para llegar a: " + destino);
-        System.out.println("en " + vehiculo);
-        System.out.println("es de: " + tiempo);
+        System.out.println("Hola: " + nombre + ", el tiempo de viaje aproximado para llegar a: " + destino + " en: " + vehiculo + " es de: " + tiempo);
 
-        scanner.close();
+
     }
 
     private static String getVehiculo(int opcion) {

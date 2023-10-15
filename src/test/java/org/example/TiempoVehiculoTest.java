@@ -44,9 +44,6 @@ class TiempoVehiculoTest {
 
         assertEquals(tiempo, resultado, 0.2);
     }
-
     
-
-
 }
 
