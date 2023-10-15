@@ -7,7 +7,7 @@ public class TiempoVehiculo {
         double velocidadAuto = 100.0; //en kilometros/hora
         double velocidadMoto = 120.0;  //en kilometros/hora
         double velocidadBicicleta = 20.0;  //en kilometros/hora
-
+        
         double tiempo = 0.0; // en horas
 
         if (opcion == 1) {
