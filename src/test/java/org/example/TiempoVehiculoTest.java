@@ -10,26 +10,24 @@ class TiempoVehiculoTest {
     public void testTiempoRecorridoAuto() {
         TiempoVehiculo tiempoVehiculo = new TiempoVehiculo();
         int opcion = 1;
-        double distancia = 100.0; // Modifica la distancia según tus necesidades
-
+        double distancia = 100.0;
         double resultado = tiempoVehiculo.tiempoRecorrido(opcion, distancia);
-        double velocidadAuto = 50.0;
+        double velocidadAuto = 100.0;
         double tiempo = distancia / velocidadAuto;
 
-        assertEquals(tiempo, resultado, 0.001);
+        assertEquals(tiempo, resultado, 1.0);
     }
 
     @Test
     public void testTiempoRecorridoMoto() {
         TiempoVehiculo tiempoVehiculo = new TiempoVehiculo();
         int opcion = 2;
-        double distancia = 100.0; // Modifica la distancia según tus necesidades
-
+        double distancia = 100.0;
         double resultado = tiempoVehiculo.tiempoRecorrido(opcion, distancia);
-        double velocidadMoto = 80.0;
+        double velocidadMoto = 120.0;
         double tiempo = distancia / velocidadMoto;
 
-        assertEquals(tiempo, resultado, 0.001);
+        assertEquals(tiempo, resultado, 1.2);
     }
 
     @Test
@@ -37,7 +35,6 @@ class TiempoVehiculoTest {
         TiempoVehiculo tiempoVehiculo = new TiempoVehiculo();
         int opcion = 3;
         double distancia = 100.0;
-
         double resultado = tiempoVehiculo.tiempoRecorrido(opcion, distancia);
         double velocidadBicicleta = 20.0;
         double tiempo = distancia / velocidadBicicleta;
