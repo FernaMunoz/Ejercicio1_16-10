@@ -25,28 +25,39 @@ public class TiempoVehiculo {
         Scanner scanner = new Scanner(System.in);
         TiempoVehiculo tiempoVehiculo = new TiempoVehiculo();
 
-        System.out.println("Vamos a calcular el tiempo de distancia");
-        System.out.println("Por favor, ingrese su nombre");
-        String nombre = scanner.nextLine();
+        do {
+            System.out.println("Vamos a calcular el tiempo de distancia");
+            System.out.println("Por favor, ingrese su nombre");
+            String nombre = scanner.nextLine();
 
-        System.out.println("Ingrese su destino");
-        String destino = scanner.nextLine();
+            System.out.println("Ingrese su destino");
+            String destino = scanner.nextLine();
 
-        System.out.println("Ingrese la distancia");
-        double distancia = scanner.nextDouble();
+            System.out.println("Ingrese la distancia");
+            double distancia = scanner.nextDouble();
 
-        System.out.println("Ahora escoja un vehículo para su viaje");
-        System.out.println("1. Auto");
-        System.out.println("2. Moto");
-        System.out.println("3. Bicicleta");
-        System.out.println("Escoja una opción");
+            System.out.println("Ahora escoja un vehículo para su viaje");
+            System.out.println("1. Auto");
+            System.out.println("2. Moto");
+            System.out.println("3. Bicicleta");
+            System.out.println("Escoja una opción");
 
-        int opcion = scanner.nextInt();
+            int opcion = scanner.nextInt();
 
-        double tiempo = tiempoVehiculo.tiempoRecorrido(opcion, distancia);
-        String vehiculo = getVehiculo(opcion);
+            double tiempo = tiempoVehiculo.tiempoRecorrido(opcion, distancia);
+            String vehiculo = getVehiculo(opcion);
 
-        System.out.println("Hola " + nombre + " , el tiempo de viaje aproximado para llegar a: " + destino + " en " + vehiculo + ", es de: " + tiempo + " horas");
+            System.out.println("Hola " + nombre + ", el tiempo de viaje aproximado para llegar a " + destino + " en " + vehiculo + " es de: " + tiempo + " horas");
+
+            System.out.println("¿Desea realizar otro cálculo? (Sí/No)");
+            scanner.nextLine(); // Limpiar el buffer
+            String decision = scanner.nextLine().toLowerCase();
+            if (!decision.equals("si") && !decision.equals("sí")) {
+                break;
+            }
+        } while (true);
+
+        scanner.close();
     }
 
     private static String getVehiculo(int opcion) {
