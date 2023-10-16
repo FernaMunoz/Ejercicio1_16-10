@@ -1,5 +1,8 @@
 # Ejercicio 1 Ayudantia
 
+Nombre: Fernanda Muñoz
+
+
 Diagrama y su analisis
 
 En esta rama se hara el analisis del diagrama UML hecho en visual Paradigm
