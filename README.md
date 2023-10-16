@@ -73,6 +73,10 @@ Ejemplo: Opcion auto
 
 El codigo cuenta con las pruebas unitarias en una rama aparte
 
+Actualización: agregue que preguntara en bucle
+do 
+while true
+
 
 
 
