@@ -1,5 +1,6 @@
 # Evidencia1
 Codigo
+Nombre: Fernanda Muñoz
 Explicacion del codigo 
 
 Primero el usuario va a ingresar su nombre, el destino al que quiere ir y la distancia de este, el cual esta en kilometros por hora
